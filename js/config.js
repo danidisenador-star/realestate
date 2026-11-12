@@ -34,9 +34,9 @@ window.RE = {
   /* ── 3. HEADER (SOLO VIDEO) ── */
   hero: {
     // 👉 VIDEO horizontal (PC). Mp4 de 8–15 s, sin sonido, menos de 6 MB. "" = solo se ve la imagen.
-    video: "/assets/video/videoheader.mp4",
+    video: "assets/video/videoheader.mp4",
     // 👉 VIDEO vertical para celular (opcional). Si lo dejas "" en el celular se usa el horizontal recortado al centro.
-    videoMovil: "/assets/video/videomovil.mp4",
+    videoMovil: "assets/video/videomovil.mp4",
     poster: "assets/img/hero-poster.jpg",     // imagen mientras carga (o si no hay video)
     // 👉 Qué parte del video se ve al recortarse en pantallas distintas: "center", "left", "right" o "30% 50%" (izq-der arriba-abajo)
     posicionVideo: "center",
