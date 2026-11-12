@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Real State · Inmobiliaria Premium</title>
+  <meta name="description" content="Recorre propiedades en 360° y encuentra tu hogar ideal en 5 segundos.">
+  <meta name="theme-color" content="#1f3a75">
+  <!-- 👉 TIPOGRAFÍAS: Inter (textos) y Libre Baskerville (logo). Cámbialas en fonts.google.com y en css/styles.css (--font / --font-logo) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>document.documentElement.classList.add("js")</script>
+</head>
+<body>
+
+<!-- ÍCONOS (no tocar) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 5v14m0 0-5-5m5 5 5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M12 3.5a8.5 8.5 0 0 0-7.4 12.7L3.5 20.5l4.4-1.1A8.5 8.5 0 1 0 12 3.5Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+  <symbol id="i-cart" viewBox="0 0 24 24"><path d="M3 4h2.4l2.1 10.2a1.6 1.6 0 0 0 1.6 1.3h8a1.6 1.6 0 0 0 1.6-1.2L20.4 8H6.2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9.5" cy="19.2" r="1.3" fill="currentColor"/><circle cx="16.5" cy="19.2" r="1.3" fill="currentColor"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m16 16 4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.3" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M9 6.5v11l9-5.5-9-5.5Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-360" viewBox="0 0 24 24"><path d="M12 3 4 7.5v9L12 21l8-4.5v-9L12 3Zm0 0v9m0 0 8-4.5M12 12 4 7.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  <symbol id="i-expand" viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-gyro" viewBox="0 0 24 24"><rect x="3.2" y="8.4" width="17.6" height="7.6" rx="2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M7.2 5.6a8.2 8.2 0 0 1 9.6 0M16.8 18.4a8.2 8.2 0 0 1-9.6 0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-swipe" viewBox="0 0 24 24"><path d="M3 12h18M7 8l-4 4 4 4M17 8l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-next" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-sound" viewBox="0 0 24 24"><path d="M4 9.5v5h3.5L12 18.5v-13L7.5 9.5H4Z" fill="currentColor"/><path d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+  <symbol id="i-mute" viewBox="0 0 24 24"><path d="M4 9.5v5h3.5L12 18.5v-13L7.5 9.5H4Z" fill="currentColor"/><path d="m16 9.5 5 5m0-5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+  <symbol id="i-instagram" viewBox="0 0 32 32"><rect x="4" y="4" width="24" height="24" rx="7" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="16" cy="16" r="5.5" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="22.8" cy="9.2" r="1.5" fill="currentColor"/></symbol>
+  <symbol id="i-linkedin" viewBox="0 0 32 32"><rect x="4" y="4" width="24" height="24" rx="4" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M10.5 14v8M10.5 10.2v.1M15 22v-8m0 3.2c0-2 1.4-3.2 3.1-3.2 1.8 0 2.9 1.2 2.9 3.4V22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+  <symbol id="i-link" viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.700 0l3-3a4 4 0 0 0-5.700-5.700l-1 1M14 10a4 4 0 0 0-5.700 0l-3 3A4 4 0 0 0 11 18.700l1-1" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+</svg>
+
+<!-- ============================ HEADER / MENÚ ============================ -->
+<header class="nav" id="nav">
+  <a class="brand" href="#inicio" aria-label="Real State, inicio">
+    <!-- 👉 LOGO: reemplaza este <span> por <img src="assets/img/logo.svg" alt="Real State"> -->
+    <span class="brand__mark">RE</span><span class="brand__name" data-brand>Real State</span>
+  </a>
+  <nav class="nav__links" aria-label="Principal">
+    <a href="#propiedades">Propiedades</a><a href="#buscador">Buscador</a><a href="#equipo">Equipo</a><a href="#contacto">Contacto</a>
+  </nav>
+  <!-- Cambia solo: "Agendar consulta" ↔ "Consultar (n)" cuando hay propiedades en el carrito -->
+  <a class="btn-cta" id="navCta" href="#" target="_blank" rel="noopener">
+    <span id="navCtaLabel">Agendar consulta</span><svg class="ic"><use href="#i-arrow"/></svg>
+    <span class="btn-cta__cart" id="navCart" hidden><svg class="ic"><use href="#i-cart"/></svg><b id="navCount">0</b></span>
+  </a>
+</header>
+
+<main id="inicio">
+
+<!-- ============================ HERO (SOLO VIDEO) ============================ -->
+<section class="hero" id="hero" aria-label="Presentación">
+  <div class="hero__media">
+    <img class="hero__poster" id="heroPoster" alt="">
+    <video class="hero__video" id="heroVideo" muted loop playsinline preload="metadata" hidden></video>
+    <div class="hero__shade"></div>
+  </div>
+  <div class="hero__text" id="heroText">
+    <!-- BOTÓN 360 (arriba, visible en web y móvil): baja al mini e-commerce de propiedades -->
+    <a class="hero__start" id="heroPill" href="#propiedades">
+      <span class="hero__start-ic"><svg class="ic"><use href="#i-360"/></svg></span>
+      <span class="hero__start-txt"><b>Visualiza propiedades en 360</b></span>
+    </a>
+    <h1 class="hero__title">Real State e Inmobiliaria Premium</h1>
+    <p class="hero__sub">Consigue tu hogar ideal con una búsqueda inteligente en 5 segundos.</p>
+    <!-- "Explorar colección": baja a la sección Consigue tu lugar ideal (buscador de propiedad ideal) -->
+    <a class="hero__explore" id="heroExplore" href="#finder">Explorar colección <svg class="ic"><use href="#i-down"/></svg></a>
+  </div>
+  <span class="hero__tag" id="heroTag"><i></i><span>Mansión moderna</span></span>
+</section>
+
+<!-- ============================ MINI E-COMMERCE ============================ -->
+<section class="props" id="propiedades">
+  <header class="sec-head reveal">
+    <p class="eyebrow"><span></span>Cuidado que se adapta a ti</p>
+    <h2 class="title">Curated Living</h2>
+    <p class="hint">Seleccione una residencia y permítanos gestionar su disponibilidad.</p>
+  </header>
+  <div class="cards" id="cards"><!-- se generan desde js/config.js --></div>
+  <button class="btn-blue props__catalog" id="catalogBtn" type="button"><span id="catalogLabel">Ver el catálogo completo</span><svg class="ic"><use href="#i-chat"/></svg></button>
+</section>
+
+<!-- ============================ CHAT / BUSCADOR (Google Sheets) ============================ -->
+<section class="chatsec" id="buscador">
+  <div class="chatsec__box reveal">
+    <form class="search" id="searchForm" autocomplete="off">
+      <svg class="ic search__ic"><use href="#i-search"/></svg>
+      <input id="searchInput" type="text" placeholder="Buscar propiedades o preguntas frecuentes…" aria-label="Buscar propiedades o preguntas frecuentes">
+      <button class="search__btn" id="searchBtn" type="submit">Buscar</button>
+    </form>
+    <div class="chat" id="chat" aria-live="polite"><div class="chips" id="chips"></div></div>
+  </div>
+</section>
+
+<!-- ============================ TU EQUIPO DE CONFIANZA (VIDEOS) ============================ -->
+<section class="tips" id="equipo">
+  <h2 class="tips__title reveal">Tu equipo de confianza</h2>
+  <p class="tips__sub reveal">Mira cómo nuestros asesores pueden ayudarte en tu búsqueda y las propiedades que tenemos para ti.<span class="only-touch"> (toca para ver)</span></p>
+  <div class="tips__row" id="tipsRow"></div>
+</section>
+
+<!-- ============================ CONSIGUE TU LUGAR IDEAL (buscador de propiedad ideal) ============================ -->
+<section class="finder" id="finder" data-step="0">
+  <!-- PASO 0: banner -->
+  <div class="finder__pane finder__pane--0">
+    <div class="finder__hero">
+      <div class="finder__txt reveal">
+        <p class="eyebrow eyebrow--light"><span></span>Somos mucho más que bienes raíces</p>
+        <h2 class="finder__title">Consigue tu lugar ideal en segundos</h2>
+        <button class="btn-glass" id="fStart" type="button">Comencemos <svg class="ic"><use href="#i-down"/></svg></button>
+      </div>
+      <!-- ============================================================================
+           🖼️ IMAGEN PEQUEÑA SUPERPUESTA (la de la esquina del banner)
+           Es independiente: está en posición "absolute", así que NO empuja ni mueve nada.
+           ✏️ CAMBIAR la foto: cambia el src. ✏️ TAMAÑO: css/styles.css → .finder__inset (width).
+           🗑️ ELIMINARLA: borra SOLO la línea <img class="finder__inset"...> de abajo. No hay que tocar CSS ni JS: el diseño no se daña.
+           ============================================================================ -->
+      <img class="finder__inset" src="assets/img/minimagen.jpg" alt="" loading="lazy">
+    </div>
+  </div>
+
+  <!-- PASO 1: elegir intereses -->
+  <div class="finder__pane finder__pane--1">
+    <p class="eyebrow eyebrow--light"><span></span>Selecciona las opciones necesarias</p>
+    <h2 class="finder__big">Defina el estándar de su próximo santuario</h2>
+    <div class="opts" id="opts"></div>
+    <div class="finder__actions"><button class="btn-ghost" id="fBack1" type="button">Volver</button><button class="btn-go" id="fGo" type="button">Continuar</button></div>
+  </div>
+
+  <!-- PASO 2: resultado -->
+  <div class="finder__pane finder__pane--2">
+    <p class="eyebrow eyebrow--light"><span></span>Tu hogar ideal está listo</p>
+    <h2 class="finder__big">Estas son las propiedades ideales para ti</h2>
+    <div class="results" id="results"></div>
+    <div class="finder__actions finder__actions--end">
+      <button class="btn-ghost" id="fBack2" type="button">← Volver</button>
+      <a class="btn-white" id="fAdvisor" href="#" target="_blank" rel="noopener">Solicitar asesoría privada</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ OFICINAS + CONTACTO ============================ -->
+<section class="visit" id="contacto">
+  <!-- 👉 Foto de fondo: assets/img/oficina.jpg (también se cambia en css/styles.css → .visit__banner) -->
+  <div class="visit__banner reveal"><p class="visit__small">Visítanos en nuestras oficinas en</p><h2 id="officeName">Mar A Lago</h2></div>
+  <div class="visit__body reveal">
+    <a class="btn-light" id="mapBtn" href="#" target="_blank" rel="noopener"><span>Ubicación (Google Maps)</span><svg class="ic"><use href="#i-pin"/></svg></a>
+    <!-- Este botón es "la casa" del botón fijo: cuando se ve, el flotante se acopla aquí y desaparece -->
+    <a class="btn-blue" id="advisorStatic" href="#" target="_blank" rel="noopener"><span>Solicitar asesoría privada</span></a>
+    <p class="visit__note">Cuéntanos qué necesitas. Te ayudamos a elegir el hogar de tus sueños y te asesoramos.</p>
+  </div>
+  <div class="social-wrap">
+    <ul class="social" id="social"></ul>
+  </div>
+  <div class="legal">
+    <p id="legalText">Real State · Aviso de privacidad / Todos los derechos reservados · Empresa registrada y con presencia internacional.</p>
+    <!-- 👉 LOGO FINAL (aparece con efecto al llegar): reemplaza el contenido por <img src="assets/img/logo-footer.svg" alt="Real State"> -->
+    <div class="legal__logo" id="legalLogo"><span class="brand__mark brand__mark--xl">RS</span><b data-brand>Real State</b></div>
+  </div>
+</section>
+</main>
+
+<!-- ============================ BOTÓN FIJO "Solicitar asesoría privada" ============================ -->
+<a class="sticky" id="sticky" href="#" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">Solicitar asesoría privada</a>
+
+<!-- ============================ AVISO TUTORIAL (mini e-commerce) ============================ -->
+<div class="coach" id="coach" role="status" hidden>
+  <span class="coach__ic"><svg class="ic"><use href="#i-360"/></svg></span>
+  <span class="coach__txt" id="coachText">Toca una propiedad para verla en 360°</span>
+  <button class="coach__x" id="coachX" type="button" aria-label="Cerrar aviso"><svg class="ic"><use href="#i-close"/></svg></button>
+</div>
+
+<!-- ============================ VISOR 360° DE LA PROPIEDAD ============================ -->
+<div class="pv" id="pv" hidden>
+  <div class="pv__backdrop" id="pvBackdrop"></div>
+  <div class="pv__card" id="pvCard" role="dialog" aria-modal="true" aria-label="Recorrido 360° de la propiedad">
+    <div class="pv__stage" id="pvStage">
+      <canvas class="pv__canvas" id="pvCanvas" aria-hidden="true"></canvas>
+      <img class="pv__fallback" id="pvFallback" alt="" hidden>
+      <div class="pv__flash" id="pvFlash"></div>
+      <div class="pv__points" id="pvPoints"></div>
+      <button class="pv__round pv__close" id="pvClose" type="button" aria-label="Cerrar recorrido"><svg class="ic"><use href="#i-close"/></svg></button>
+      <button class="pv__round pv__cart" id="pvCart" type="button" aria-pressed="false" aria-label="Agregar al carrito"><svg class="ic"><use href="#i-cart"/></svg></button>
+      <div class="pv__hint" id="pvHint" role="status"><svg class="ic"><use href="#i-swipe"/></svg><span id="pvHintText"></span></div>
+      <div class="pv__tools">
+        <button class="pv__pill" id="pvGyro" type="button" hidden><svg class="ic"><use href="#i-gyro"/></svg><span id="pvGyroText">Giroscopio</span></button>
+        <button class="pv__round pv__full" id="pvFull" type="button" aria-label="Pantalla completa"><svg class="ic"><use href="#i-expand"/></svg></button>
+      </div>
+    </div>
+    <div class="pv__info"><h3 id="pvTitle"></h3><p id="pvLoc"></p></div>
+    <a class="btn-blue pv__ask" id="pvAsk" href="#" target="_blank" rel="noopener"><span>Consultar propiedad</span><svg class="ic"><use href="#i-chat"/></svg></a>
+  </div>
+</div>
+
+<!-- Visor vertical tipo TikTok (móvil) para los videos del equipo -->
+<div class="feed" id="feed" hidden role="dialog" aria-label="Videos">
+  <button class="feed__close" id="feedClose" type="button" aria-label="Cerrar"><svg class="ic"><use href="#i-close"/></svg></button>
+  <button class="feed__sound" id="feedSound" type="button"><svg class="ic"><use href="#i-mute"/></svg><span id="feedSoundText">Activar sonido</span></button>
+  <div class="feed__hint" id="feedHint">Desliza hacia abajo</div>
+  <div class="feed__scroll" id="feedScroll"></div>
+</div>
+<div class="toast" id="toast" role="status"></div>
+
+<script src="js/config.js"></script>
+<script src="js/pano.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
